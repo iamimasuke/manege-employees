@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>従業員の追加</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>従業員の追加</h1>
+
+    <nav>
+        <ul>
+            <li class="current">
+                <a href="http://localhost:3000">Home</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="editSection">
+        <form id="addForm" method="post" action="/save">
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for "position">役職:</label>
+            <input type="text" id="position" name="position"><br>
+            <label for="serviceYears">勤続年数:</label>
+            <input type="text" id="serviceYears" name="serviceYears"><br>
+            <label for="attendanceRate">出勤率:</label>
+            <input type="text" id="attendanceRate" name="attendanceRate"><br>
+            <label for="affiliation">所属:</label>
+            <input type="text" id="affiliation" name="affiliation"><br>
+            <input id="addButton" type="submit" value="保存">
+        </form>
+    </div>
+</body>
+
+<style>
+    nav ul li.current a {
+        color: #000; /* Black text color */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Make it bold for emphasis */
+        transition: color 0.2s; /* Add a smooth color transition effect */
+        display: inline-block; /* Make the link a block element for button-like appearance */
+        padding: 8px 16px; /* Add padding for a button-like feel */
+        border: 2px solid #000; /* Add a border for distinction */
+        border-radius: 5px; /* Rounded corners for a button effect */
+    }
+    
+    nav ul li.current a:hover {
+        color: #333; /* Slightly darker text color on hover */
+        background-color: #eee; /* Light gray background on hover for more distinction */
+        border: 2px solid #333; /* Darker border on hover */
+    }
+
+</style>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>店舗従業員リスト</title>
+</head>
+
+<body>
+    <h1>従業員一覧</h1>
+
+    <nav>
+        <ul>
+        <li class=”current”>
+        <a href="http://localhost:3000">Home</a></li>
+        <li><a href="/add">追加</a></li>
+        </ul>
+    </nav>
+
+    <table border=”1″>
+    <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>役職</th>
+        <th>勤続年数</th>
+    </tr>
+    <% list.forEach(function(item) { %>
+        <tr>
+          <td><%= item.id %></td>
+          <td><a href="/personal/<%= item.id %>"><%= item.name %></a></td>
+          <td><%= item.position %></td>
+          <td><%= item.serviceYears %></td>
+        </tr>
+      <% }); %>
+    </table>
+
+</body>
+
+
+
+<style>
+/* Reset some default styles to start with a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and set a font family for the whole page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header with a background color, text color, and padding */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 0; /* Remove top margin */
+}
+
+/* Style the table with a border and some spacing */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #333; /* Add a border to the table */
+}
+
+/* Style the table headers with a background color, text color, and padding */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the table cells with a subtle background color and padding */
+td {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the odd rows with a slightly different background color */
+tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+/* Add a hover effect to the table rows */
+tr:hover {
+    background-color: #ccc;
+}
+
+/* Add some spacing between the cells */
+th, td {
+    border: 1px solid #333;
+}
+
+/* Center text in table cells */
+th, td {
+    text-align: center;
+}
+
+/* Add rounded corners to the table */
+table {
+    border-radius: 10px;
+    overflow: hidden; /* Hide table borders at the corners */
+}
+
+/* Add a subtle shadow to the table */
+table {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+nav{
+    text-align: center;
+    }
+    nav ul{
+    margin: 0 ;
+    padding: 0 ;
+    }
+    nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 18%;
+    min-width: 90px;
+    }
+    nav ul li a{
+    text-decoration: none;
+    color: #333;
+    }
+    nav ul li.current a{
+    color: #F33135;
+    }
+    nav ul li a:hover{
+    color: #E7DA66;
+    }
+
+
+</style>
+</html>

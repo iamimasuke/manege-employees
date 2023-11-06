@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>従業員の詳細情報</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>従業員の詳細情報</h1>
+    <table class="employee-details">
+        <tr>
+            <th>項目</th>
+            <th>詳細</th>
+        </tr>
+        <tr>
+            <td>名前</td>
+            <td><%= employee.name %></td>
+        </tr>
+        <tr>
+            <td>役職</td>
+            <td><%= employee.position %></td>
+        </tr>
+        <tr>
+            <td>勤続年数</td>
+            <td><%= employee.serviceYears %> 年</td>
+        </tr>
+        <tr>
+            <td>出勤率</td>
+            <td><%= employee.attendanceRate %>%</td>
+        </tr>
+        <tr>
+            <td>所属</td>
+            <td><%= employee.affiliation %></td>
+        </tr>
+    </table>
+
+    <a href="/edit/<%= employee.id %>">編集</a>
+    
+    <p><a href="http://localhost:3000">戻る</a></p>
+</body>
+
+<style>
+/* Apply styles to the table */
+.employee-details {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.employee-details th, .employee-details td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.employee-details th {
+    background-color: #f5f5f5;
+}
+
+/* Style the "戻る" link */
+a {
+    text-decoration: none;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #0055aa;
+}
+
+
+</style>
+</html>

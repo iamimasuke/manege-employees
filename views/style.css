@@ -1,0 +1,75 @@
+/* Reset some default styles to start with a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and set a font family for the whole page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header with a background color, text color, and padding */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 0; /* Remove top margin */
+}
+
+/* Style the table with a border and some spacing */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #333; /* Add a border to the table */
+}
+
+/* Style the table headers with a background color, text color, and padding */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the table cells with a subtle background color and padding */
+td {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the odd rows with a slightly different background color */
+tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+/* Add a hover effect to the table rows */
+tr:hover {
+    background-color: #ccc;
+}
+
+/* Add some spacing between the cells */
+th, td {
+    border: 1px solid #333;
+}
+
+/* Center text in table cells */
+th, td {
+    text-align: center;
+}
+
+/* Add rounded corners to the table */
+table {
+    border-radius: 10px;
+    overflow: hidden; /* Hide table borders at the corners */
+}
+
+/* Add a subtle shadow to the table */
+table {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

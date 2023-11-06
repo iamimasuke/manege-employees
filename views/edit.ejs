@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>従業員の詳細情報</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>従業員の詳細情報編集</h1>
+
+    <div id="editSection">
+        <form id="editForm" method="post" action="/ed/<%= employee.id %>">
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name" value="<%= employee.name %>"><br>
+            <label for="position">役職:</label>
+            <input type="text" id="position" name="position" value="<%= employee.position %>"><br>
+            <label for="serviceYears">勤続年数:</label>
+            <input type="text" id="serviceYears" name="serviceYears" value="<%= employee.serviceYears %>"><br>
+            <label for="attendanceRate">出勤率:</label>
+            <input type="text" id="attendanceRate" name="attendanceRate" value="<%= employee.attendanceRate %>"><br>
+            <label for="affiliation">所属:</label>
+            <input type="text" id="affiliation" name="affiliation" value="<%= employee.affiliation %>"><br>
+            <input id="editButton" type="submit" value="保存">        </form>
+        
+    </div>
+
+    <form id="deletForm" method="post" action="/delete/<%= employee.id %>">
+    <input id="deletButton" type="submit" value="消去">
+    </form>
+
+    <p><a href="/personal/<%= employee.id %>">戻る</a></p>
+</body>
+
+<script>/*
+    document.getElementById("editButton").addEventListener("click", function() {
+        document.getElementById("editSection").style.display = "block";
+    });
+*/
+</script>
+<style>
+
+/* Style the "戻る" link */
+a {
+    text-decoration: none;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #0055aa;
+}
+
+
+</style>
+</html>
